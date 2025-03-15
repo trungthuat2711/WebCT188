@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.page__header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Dàn đều các phần tử */
+    padding: 10px 20px;
+}
+
+.link__logo{
+    width: 10%;
+    max-width: 100px;
+    min-width: 50px;
+    height: auto;
+    flex-shrink: 0; /*co lại nếu cần */
+}
+/* Navbar */
+.header__nav {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #655a52 ;
+}
+
+.nav__link {
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px; 
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+.nav__link:hover {
+    background-color: #B9D3EE;
+}
+
+/* Search bar */
+.header__search-container{
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form__input {
+    padding: 10px;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.form__input:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.form__button {
+    background: #5cb85c;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.form__button:hover {
+    background: #4cae4c;
+}
+
+.page__main{
+    background-color: rgb(255, 255, 255);
+}
+/* Banner */
+.main__banner {
+    width: 100%;
+    max-height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd; /* Màu nền nếu ảnh không tải được */
+    margin-bottom: 20px; /* Khoảng cách với nội dung bên dưới */
+    border-bottom: 3px solid #655a52;
+    border-top: 3px solid #655a52;
+    position: relative;
+}
+.main__banner--slider {
+    display: flex;
+    width: 100%; 
+}
+.banner__img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover; /* Giữ tỉ lệ ảnh và cắt vừa với kích thước */
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+    .banner__img {
+        max-height: 200px;
+    }
+}
+
+/* Product container */
+.main__product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    /* Bắt đầu ẩn và dịch chuyển xuống */
+    opacity: 0;
+    transform: translateY(100px);
+    animation: animated-product 1s ease-out forwards;
+}
+@keyframes animated-product{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section__product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 40px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section__product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product__img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* transition: opacity 0.5s ease-in-out; */
+}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+.product__title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+    min-height: 50px;
+    margin: 10px 0;
+}
+
+.product__cost {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: #C69967;
+    min-height: 30px;
+    margin: 5px 0 15px;
+}
+
+.product__button-cart {
+    padding: 10px 15px;
+    background: #0056b3;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.product__button-cart:hover {
+    background: #003f8a;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.product__button-cart:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.page__footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-top: 3px solid #655a52;
+}
+@media (max-width: 768px) {
+    .page__header {
+        flex-direction: column; /* Chuyển thành cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .header__nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav__link {
+        flex-grow: 0; /* Không chiếm quá nhiều không gian */
+        padding: 8px 10px;
+    }
+}
