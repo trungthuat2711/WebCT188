@@ -49,6 +49,7 @@ body {
     font-size: 20px;
     padding: 10px 15px;
     transition: background 0.3s ease;
+    overflow-wrap: break-word;
 }
 
 .nav__link:hover {
@@ -78,7 +79,7 @@ body {
 }
 .off__side {
     position: fixed;
-    left: -250px; /* ẩn menu bên ngoài màn hình */
+    left: -250px; 
     top: 0;
     width: 100px;
     height: 100%;
@@ -177,7 +178,7 @@ body {
 .main__product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 20px;
     padding: 20px;
     /* Bắt đầu ẩn và dịch chuyển xuống */
@@ -269,7 +270,20 @@ body {
 }
 
 
-/* Mobile & Tablet  */
+/* Large Tablet - Small desktop - laptop */
+@media screen and (max-width: 1280px) {
+    /* căn giữa logo, thanh tìm kiếm... */
+    .page__header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__search-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+/* Extra Small Mobile - Small Tablet  */
 @media screen and (max-width: 768px) {
     /* căn giữa logo, thanh tìm kiếm... */
     .page__header {

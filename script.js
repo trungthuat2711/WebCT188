@@ -57,7 +57,7 @@ window.addEventListener("load", function() {
     }, 1);
 });
 
-//4.Bật menu hiện thanh nav.
+//4.Bật tắt menu.
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".off__side");
     const closeBtn = document.querySelector(".side__button-close");
