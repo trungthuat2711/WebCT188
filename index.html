@@ -9,7 +9,6 @@
 <body class="page">
 
 <header class="page__header">
-    
     <a class="header__link" href="./trangchu.html"><img class="link__logo" src="./img/logo-removebg-preview.png" alt="logo"></a>
 
     <nav class="header__nav">
@@ -19,11 +18,20 @@
         <a class="nav__link" href="./index.html">Sản Phẩm</a>
         <a class="nav__link" href="./giohang.html">Giỏ Hàng</a>
     </nav>
-
-    <div class="header__search-container">
-        <!-- Hamburger menu -->
-        <button class="hamburger-menu">&#9776;</button>
-        
+    
+    <!-- Hamburger menu -->
+    <button class="hamburger-menu">&#9776;</button>
+    <aside class="off__side">
+        <button class="side__button-close">&times;</button>
+        <nav class="side__nav">
+            <a class="side__nav-link" href="./trangchu.html">Trang Chủ</a>
+            <a class="side__nav-link" href="./dangky.html">Đăng Ký</a>
+            <a class="side__nav-link" href="./dangnhap.html">Đăng Nhập</a>
+            <a class="side__nav-link" href="./index.html">Sản Phẩm</a>
+            <a class="side__nav-link" href="./giohang.html">Giỏ Hàng</a>
+        </nav>
+    </aside>
+    <div class="header__search-container">    
         <form class="search-container__form" action="timkiem.html" method="GET">
             <input class="form__input" type="text" name="q" placeholder="Tìm kiếm sản phẩm...">
             <button class="form__button" type="submit">Tìm kiếm</button>

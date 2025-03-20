@@ -59,10 +59,16 @@ window.addEventListener("load", function() {
 
 //4.Bật menu hiện thanh nav.
 document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector(".hamburger-menu");
-    const navMenu = document.querySelector(".header__nav");
+    const sidebar = document.querySelector(".off__side");
+    const closeBtn = document.querySelector(".side__button-close");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
 
-    menuButton.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
+    hamburgerMenu.addEventListener("click", function () {
+        sidebar.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        sidebar.classList.remove("active");
     });
 });
+
