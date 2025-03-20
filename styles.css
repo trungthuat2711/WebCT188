@@ -16,12 +16,15 @@ body {
     padding: 10px 20px;
 }
 
+.header__link{
+    max-width: 50px;
+}
 .link__logo{
     width: 10%;
     max-width: 100px;
     min-width: 50px;
     height: auto;
-    flex-shrink: 0; /*co lại nếu cần */
+    flex-shrink: 1; /*co lại nếu cần */
 }
 /* Navbar */
 .header__nav {
@@ -52,6 +55,9 @@ body {
     background-color: #B9D3EE;
 }
 
+.hamburger-menu{
+    display:none;
+}
 /* Search bar */
 .header__search-container{
     text-align: center;
@@ -86,7 +92,7 @@ body {
 }
 
 .page__main{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
 }
 /* Banner */
 .main__banner {
@@ -111,14 +117,6 @@ body {
     max-height: 450px;
     object-fit: cover; /* Giữ tỉ lệ ảnh và cắt vừa với kích thước */
 }
-
-/* Responsive cho thiết bị nhỏ */
-@media (max-width: 768px) {
-    .banner__img {
-        max-height: 200px;
-    }
-}
-
 /* Product container */
 .main__product-container {
     display: flex;
@@ -213,19 +211,49 @@ body {
     padding: 25px;
     border-top: 3px solid #655a52;
 }
-@media (max-width: 768px) {
+
+
+/* Mobile & Tablet  */
+@media screen and (max-width: 768px) {
+    /* căn giữa logo, thanh tìm kiếm... */
     .page__header {
-        flex-direction: column; /* Chuyển thành cột */
-        align-items: center; /* Căn giữa các phần tử */
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* Hiển thị hamburger menu */
+    .hamburger-menu {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+    
     .header__nav {
         width: 100%;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        background: #B9D3EE;
+        text-align: center;
+        position: absolute;
+        gap: 5px;
+        top: 155px;
+        left: 0;
+        z-index: 10;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .nav__link {
-        flex-grow: 0; /* Không chiếm quá nhiều không gian */
-        padding: 8px 10px;
+    /* Hiện nav khi ấn vào hamburger menu */
+    .header__nav.active {
+        display: flex;
+    }
+    .nav__link:hover{
+        background-color: white;
+    }
+    .header__search-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
     }
 }

@@ -1,4 +1,4 @@
-//1.Chuyển ảnh khi di chuột vào sản phẩmphẩm
+//1.Chuyển ảnh khi di chuột vào sản phẩm
 document.querySelectorAll(".section__product").forEach(product => {
     const img = product.querySelector(".product__img");
     if (!img) return;
@@ -10,7 +10,7 @@ document.querySelectorAll(".section__product").forEach(product => {
     if (secondImg) {
         img.style.transition = "opacity 0.3s ease"; 
 
-        product.addEventListener("mouseenter", () => {
+        product.addEventListener("mouseenter", function() {
             img.style.opacity = "0.5"; //Làm mờ trước khi đổi ảnh
             setTimeout(() => {
                 img.src = secondImg;
@@ -18,7 +18,7 @@ document.querySelectorAll(".section__product").forEach(product => {
             }, 150);
         });
 
-        product.addEventListener("mouseleave", () => {
+        product.addEventListener("mouseleave", function() {
             img.style.opacity = "0.5";
             setTimeout(() => {
                 img.src = firstImg;
@@ -55,4 +55,14 @@ window.addEventListener("load", function() {
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, 1);
+});
+
+//4.Bật menu hiện thanh nav.
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector(".header__nav");
+
+    menuButton.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    });
 });
