@@ -215,6 +215,7 @@ body {
 
 /* Mobile & Tablet  */
 @media screen and (max-width: 768px) {
+    /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap'); */
     /* căn giữa logo, thanh tìm kiếm... */
     .page__header {
         flex-direction: column;
