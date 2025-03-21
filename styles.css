@@ -262,14 +262,92 @@ body {
 
 /* Footer */
 .page__footer {
-    background: #333;
-    color: white;
+    background-color: #222; 
+    color: #fff; 
+    padding: 40px 0;
     text-align: center;
-    padding: 25px;
-    border-top: 3px solid #655a52;
 }
 
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+.footer__column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+
+}
+
+.social-icons__link{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+/* facebook icon */
+.footer__social-icons a:nth-child(1){
+    background-color: #3b5998;
+}
+.footer__social-icons a:nth-child(1):hover{
+    background-color: white;
+    color: #3b5998;
+}
+/* instagram icon */
+.footer__social-icons a:nth-child(2){
+    background-color: #e4405f;
+}
+.footer__social-icons a:nth-child(2):hover{
+    background-color: white;
+    color: #e4405f;
+}
+/* youtube icon */
+.footer__social-icons a:nth-child(3){
+    background-color: #ff0000;
+}
+.footer__social-icons a:nth-child(3):hover{
+    background-color: white;
+    color: #ff0000;
+}
+.footer__copyright {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #ffffffe9;
+}
 /* Large Tablet - Small desktop - laptop */
 @media screen and (max-width: 1280px) {
     /* căn giữa logo, thanh tìm kiếm... */
