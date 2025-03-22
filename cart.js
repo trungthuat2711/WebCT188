@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="increase" data-index="${index}">+</button>
                 </td>
                 <td>${(item.price * item.quantity).toLocaleString()} VNĐ</td>
-                <td><button class="remove-item" data-index="${index}">Xóa</button></td>
+                <td><button class="remove-item" data-index="${index}">&#128465;</button></td>
             `;
 
             cartTable.appendChild(row);

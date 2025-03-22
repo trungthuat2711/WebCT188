@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const productImage = product.querySelector(".product__img").src;
             
             addToCart(productId, productName, productPrice, productImage);
-            changeButtonStyle(this);
+            changeButtonStyle(this); // đổi màu và chữ của nút.
         });
     });
 
